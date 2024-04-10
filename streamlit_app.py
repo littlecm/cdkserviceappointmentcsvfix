@@ -9,7 +9,7 @@ def sum_numbers_in_cell(cell):
 def process_dataframe(uploaded_file):
     df = pd.read_csv(uploaded_file)
 
-    df['sold_hours_total'] = df['sold_hours'].apply(sum_numbers_in_cell)
+    df['sold_hours_total'] = df['sold-hours'].apply(sum_numbers_in_cell)
     df['parts_total'] = df['parts'].apply(sum_numbers_in_cell)
 
     df.drop(['sold_hours', 'parts'], axis=1, inplace=True)
